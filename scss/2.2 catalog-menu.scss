@@ -1,0 +1,94 @@
+@import "variables";
+
+.catalog {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 0.33fr));
+  width: 100%;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1360px;
+
+  @media(max-width:768px) {
+    // padding: 0 14px;
+  }
+
+  @media(max-width:505px) {
+    // padding: 0 19px;
+  }
+}
+
+.card {
+  box-sizing: border-box;
+  max-height: 506px;
+  border-radius: 40px;
+  border: 1px solid $light-brown;
+  cursor: pointer;
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 308px;
+    height: 308px;
+    vertical-align: middle;
+
+    border-radius: 40px;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    transform: scale(1.1);
+    transition: all 0.9s ease-in-out;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      .card__image {
+        transform: scale(1.0);
+      }
+    }
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    height: 156px;
+    padding: 22px 19px;
+  }
+
+  .coffee__name {
+    padding-bottom: 12px;
+  }
+
+  &.hide {
+    @media(max-width:768px) {
+      display: none;
+    }
+  }
+}
+
+.button-refresh {
+
+  @media(max-width:768px) {
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto;
+    margin-top: 40px;
+
+    border: 1px solid $brown;
+  }
+}
+
+.hide {
+  @media(max-width:768px) {
+    display: none;
+  }
+}

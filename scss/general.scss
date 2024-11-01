@@ -1,0 +1,139 @@
+@import "variables";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Inter, sans-serif;
+  color: $dark;
+  background: $light-grey;
+}
+
+.body-wraper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-block: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+section,
+header,
+footer {
+
+  @media(max-width:768px) {}
+
+  @media(max-width:505px) {}
+}
+
+.container {
+  box-sizing: border-box;
+  display: block;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media(max-width:768px) {}
+
+  @media(max-width:505px) {
+    padding: 0 16px;
+  }
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-20 {
+  margin-top: 15px;
+}
+
+.h1 {
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 106%;
+
+  @media(max-width:768px) {}
+
+  @media(max-width:505px) {
+    font-size: 42px;
+    line-height: 116%;
+  }
+}
+
+.h2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  color: $dark;
+
+  @media(max-width:768px) {}
+
+  @media(max-width:505px) {
+    font-size: 2rem;
+  }
+}
+
+.h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.p {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  line-height: 150%;
+  color: $dark;
+}
+
+.p-bold {
+  font-weight: 600;
+}
+
+.light-color {
+  color: $light-grey;
+}
+
+.accent {
+  font-style: italic;
+  color: $nude;
+}
+
+.button {
+  display: block;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 100px;
+
+  cursor: pointer;
+}

@@ -1,0 +1,100 @@
+@import "variables";
+
+.mobile-app {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 630px;
+  column-gap: 100px;
+
+  @media(max-width:768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+
+  @media(max-width:505px) {
+    gap: 40px;
+  }
+
+  &__info {
+    align-self: center;
+
+    @media(max-width:505px) {
+      align-self: start;
+    }
+  }
+
+  .h2 {
+    line-height: 125%;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+
+    @media(max-width:505px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__small-text {
+    margin-bottom: 2px;
+
+    font-size: 10px;
+    line-height: 140%;
+  }
+
+  .market-button {
+    display: flex;
+    gap: 8px;
+
+    width: 200px;
+
+    padding: 11px 20px;
+
+    border: 1px solid $brown;
+
+    transition: all 0.7s ease-in-out;
+
+    @media (hover: hover) {
+      &:hover {
+        background: $brown;
+        color: $light-grey;
+      }
+
+      &:hover .market-button__icon path {
+        fill: $light-grey;
+      }
+
+      &:hover p {
+        color: $light-grey;
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+    align-self: center;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    @media(max-width:768px) {
+      align-self: center;
+      max-width: 630px;
+      aspect-ratio: 1 / 1;
+    }
+
+    @media(max-width:505px) {
+      max-width: 100%;
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    height: auto;
+  }
+}
